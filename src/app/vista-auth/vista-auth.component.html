@@ -1,0 +1,23 @@
+<div class="authBlock">
+  <h3>Angular Firebase Signout / Logout Example</h3>
+  <!-- Calling SignOut Api from AuthenticationService -->
+  <div class="formGroup">
+    <input
+      type="button"
+      class="btn btnPrimary"
+      value="Log in"
+      (click)="authenticationService.SignOut()"
+    />
+  </div>
+</div>
+
+<div class="formGroup">
+  <input type="text" class="formControl" placeholder="Username" #userName required>
+</div>
+<div class="formGroup">
+  <input type="password" class="formControl" placeholder="Password" #userPassword required>
+</div>
+<!-- Calling SignIn Api from AuthService -->
+<div class="formGroup">
+  <input type="button" class="btn btnPrimary" value="Log in" (click)="authenticationService.SignIn(userName.value, userPassword.value)">
+</div>
